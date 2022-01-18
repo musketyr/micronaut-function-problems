@@ -1,8 +1,7 @@
 package micronaut.function.problems
 
 import groovy.transform.CompileStatic
-
-import javax.inject.Singleton
+import jakarta.inject.Singleton
 
 @Singleton
 @CompileStatic

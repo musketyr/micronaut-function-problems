@@ -24,9 +24,10 @@ dependencies {
     compileOnly platform("io.micronaut:micronaut-bom:$micronautVersion")
     compileOnly "io.micronaut:micronaut-inject-groovy"
     implementation platform("io.micronaut:micronaut-bom:$micronautVersion")
-    implementation "io.micronaut:micronaut-runtime-groovy"
+    implementation "io.micronaut.groovy:micronaut-runtime-groovy"
     implementation "io.micronaut:micronaut-validation"
-    implementation "io.micronaut:micronaut-function-groovy"
+    implementation "io.micronaut.groovy:micronaut-function-groovy"
+    implementation "io.micronaut:micronaut-function"
     runtimeOnly "com.amazonaws:aws-lambda-java-log4j2:1.0.0"
     runtimeOnly "org.apache.logging.log4j:log4j-slf4j-impl:2.9.1"
     testCompileOnly platform("io.micronaut:micronaut-bom:$micronautVersion")
@@ -63,6 +64,10 @@ jar {
     manifest {
         attributes 'Main-Class': mainClassName
     }
+}
+
+test {
+    useJUnitPlatform()
 }
 
 if(new File("${System.getProperty("user.home")}/.aws/credentials").exists()) {

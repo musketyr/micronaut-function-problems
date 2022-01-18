@@ -1,8 +1,7 @@
 package micronaut.function.problems
 
 import io.micronaut.function.client.FunctionClient
-
-import javax.inject.Named
+import jakarta.inject.Named
 
 @FunctionClient
 interface MicronautFunctionProblemsClient {

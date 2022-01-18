@@ -1,10 +1,8 @@
 package micronaut.function.problems
 
-import io.micronaut.context.ApplicationContext
-import io.micronaut.test.annotation.MicronautTest
-import io.micronaut.runtime.server.EmbeddedServer
+import io.micronaut.test.extensions.spock.annotation.MicronautTest
+import jakarta.inject.Inject
 import spock.lang.Specification
-import javax.inject.Inject
 
 @MicronautTest
 class MicronautFunctionProblemsFunctionSpec extends Specification {
